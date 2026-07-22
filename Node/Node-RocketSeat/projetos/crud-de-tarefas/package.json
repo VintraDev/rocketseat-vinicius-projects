@@ -1,0 +1,16 @@
+{
+  "name": "crud-de-tarefas",
+  "version": "1.0.0",
+  "description": "Gerenciamento de tarefas completos do curso da Rocket Seat",
+  "license": "ISC",
+  "author": "Vinicius",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch ./src/server.js"
+  },
+  "dependencies": {
+    "csv-parse": "^6.2.1"
+  }
+}

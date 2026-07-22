@@ -1,0 +1,32 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.8.5",
+    "knex": "^3.2.10",
+    "sqlite3": "^6.0.1",
+    "supertest": "^7.2.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "vitest": "^4.1.9",
+    "zod": "^4.4.3"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "knex": "node --import tsx/esm node_modules/knex/bin/cli.js",
+    "lint": "eslint src --ext .ts",
+    "build": "tsup src --out-dir build --format esm",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.2",
+    "@types/supertest": "^7.2.0",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  }
+}
