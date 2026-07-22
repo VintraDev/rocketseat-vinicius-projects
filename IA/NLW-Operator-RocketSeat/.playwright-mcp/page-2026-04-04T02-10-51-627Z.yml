@@ -1,0 +1,93 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: ">"
+        - link "devroast" [ref=e6] [cursor=pointer]:
+          - /url: /
+      - link "leaderboard" [ref=e8] [cursor=pointer]:
+        - /url: /leaderboard
+    - main [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - generic [ref=e13]: $
+            - heading "paste your code. get roasted." [level=1] [ref=e14]
+          - paragraph [ref=e15]: // drop your code below and we'll rate it - brutally honest or full roast mode
+        - generic [ref=e17]:
+          - button "Select programming language" [ref=e25]:
+            - generic [ref=e26]:
+              - generic [ref=e27]: JavaScript
+              - text: "0"
+            - img [ref=e28]
+          - generic [ref=e30]:
+            - generic [ref=e32]: "1"
+            - generic [ref=e33]:
+              - textbox "// paste your code here for roasting..." [ref=e34]
+              - generic: 0/2.000
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - switch "Toggle roast mode" [checked] [ref=e38]
+            - generic [ref=e40]: roast mode
+          - button "$ roast_my_code" [ref=e42] [cursor=pointer]
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - img "0" [ref=e46]:
+              - generic [ref=e49]: "0"
+            - text: codes roasted
+          - generic [ref=e50]: ·
+          - generic [ref=e51]:
+            - text: "avg score:"
+            - img "0,0" [ref=e53]:
+              - generic [ref=e54]:
+                - generic [ref=e56]: "0"
+                - generic [ref=e57]:
+                  - generic [ref=e58]: ","
+                  - generic [ref=e59]: "0"
+            - text: /10
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: //
+            - generic [ref=e65]: shame_leaderboard
+          - link "$ view_all >>" [ref=e67] [cursor=pointer]:
+            - /url: /leaderboard
+        - generic [ref=e68]: // the worst code on the internet, ranked by shame
+        - generic [ref=e69]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: RANK
+            - generic [ref=e73]: SCORE
+            - generic [ref=e74]: CODE
+            - generic [ref=e75]: LANG
+          - generic [ref=e76]:
+            - generic [ref=e79]:
+              - generic [ref=e81]: "#1"
+              - generic [ref=e83]: "3"
+              - generic [ref=e85]:
+                - generic [ref=e86]: "interface User { name: string; email: string; } class UserService { private users: User[] = [..."
+                - button "show more" [ref=e87] [cursor=pointer]:
+                  - text: show more
+                  - img [ref=e88]
+              - generic [ref=e91]: typescript
+            - generic [ref=e94]:
+              - generic [ref=e96]: "#2"
+              - generic [ref=e98]: "5"
+              - generic [ref=e100]:
+                - generic [ref=e101]: "function calculateTotal(items) { let total = 0; for (let i = 0; i < items.length; i++) { if ..."
+                - button "show more" [ref=e102] [cursor=pointer]:
+                  - text: show more
+                  - img [ref=e103]
+              - generic [ref=e106]: javascript
+            - generic [ref=e109]:
+              - generic [ref=e111]: "#3"
+              - generic [ref=e113]: "8"
+              - generic [ref=e115]:
+                - generic [ref=e116]: "def fibonacci(n): if n <= 1: return n return fibonacci(n-1) + fibonacci(n-2) result..."
+                - button "show more" [ref=e117] [cursor=pointer]:
+                  - text: show more
+                  - img [ref=e118]
+              - generic [ref=e121]: python
+        - link "showing top 3 of 3 - 3 roasts completed - view full leaderboard >>" [ref=e123] [cursor=pointer]:
+          - /url: /leaderboard
+  - button "Open Next.js Dev Tools" [ref=e129] [cursor=pointer]:
+    - img [ref=e130]
