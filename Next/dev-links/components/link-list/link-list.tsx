@@ -1,19 +1,22 @@
-import Link from "next/link";
 import { Button } from "../ui/button";
 
-type LinksProps = {
+type LinkItem = {
     link: string;
     text: string;
 }
 
-export function LinkList(links: LinksProps) {
+type LinkListProps = {
+    links: LinkItem[];
+}
+
+export function LinkList({ links }: LinkListProps) {
     return (
-        <div>
-            {links.map((index) => {
-                <Button key={}>
-                    <Link href={}></Link>
+        <div className="flex flex-col gap-4">
+            {links.map((item, index) => (
+                <Button key={index}>
+                    <a href={item.link}>{item.text}</a>
                 </Button>
-            })}
+            ))}
         </div>
     )
 }
