@@ -1,0 +1,13 @@
+{
+  "name": "@saas/tsconfig",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    "./library.json": "./library.json",
+    "./base.json": "./base.json",
+    "./nextjs.json": "./nextjs.json"
+  },
+  "files": ["base.json", "library.json", "nextjs.json", "node.json"]
+}

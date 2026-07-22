@@ -1,0 +1,15 @@
+{
+  "name": "@saas/eslint-config",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./base": "./base.js",
+    "./next": "./next.js",
+    "./node": "./node.js"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "latest",
+    "eslint-plugin-turbo": "latest"
+  }
+}
