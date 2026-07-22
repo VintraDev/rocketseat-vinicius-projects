@@ -14,7 +14,7 @@ export function LinkList({ links }: LinkListProps) {
         <div className="flex flex-col gap-4">
             {links.map((item, index) => (
                 <Button key={index}>
-                    <a href={item.link}>{item.text}</a>
+                    <a target="_blank" className="text-md" href={item.link}>{item.text}</a>
                 </Button>
             ))}
         </div>

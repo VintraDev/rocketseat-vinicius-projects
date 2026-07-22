@@ -9,16 +9,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-(--surface-color) hover:bg-(--surface-color-hover) border-(--border-color) hover:border-(--border-color-hover) rounded-2",
+        secondary: "bg-none hover:bg-(--surface-color-hover) rounded-full"
       },
       size: {
         default:
           "py-4 w-full",
-        icon: "size-8",
-        "icon-xs":
-          "size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3",
-        "icon-sm":
-          "size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg",
-        "icon-lg": "size-9",
+          icon: "w-fit p-2",
       },
     },
     defaultVariants: {
