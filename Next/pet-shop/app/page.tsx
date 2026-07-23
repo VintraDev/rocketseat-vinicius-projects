@@ -16,9 +16,9 @@ export default function Home() {
 
   return (
     <div>
-      <h2>Title</h2>
+      <h2>Title 2</h2>
 
-      <Component title={100} />
+      <Component title={1100} />
     </div>
   );
 }
