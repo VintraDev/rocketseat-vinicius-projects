@@ -16,9 +16,9 @@ export default function Home() {
 
   return (
     <div>
-      <h2>RocketSeat</h2>
+      <h2>Title</h2>
 
-      <Component title={4} />
+      <Component title={100} />
     </div>
   );
 }
