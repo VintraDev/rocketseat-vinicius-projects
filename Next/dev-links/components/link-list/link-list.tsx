@@ -11,7 +11,7 @@ type LinkListProps = {
 
 export function LinkList({ links }: LinkListProps) {
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 py-6">
             {links.map((item, index) => (
                 <Button key={index}>
                     <a target="_blank" className="text-md" href={item.link}>{item.text}</a>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Define para o Tailwind v4 reconhecer a classe .dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --text-color: rgb(0, 0, 0);
   --border-color: rgba(0, 0, 0, 0.5);
@@ -9,14 +12,12 @@
   --toggle-handle-color: rgb(255, 255, 255);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: rgb(255, 255, 255);
-    --border-color: rgba(255, 255, 255, 0.5);
-    --surface-color: rgba(255, 255, 255, 0.1);
-    --surface-color-hover: rgba(255, 255, 255, 0.05);
-    --highlight-color: rgba(255, 255, 255, 0.2);
-  }
+.dark {
+  --text-color: rgb(255, 255, 255);
+  --border-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 @layer utilities {
