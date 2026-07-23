@@ -4,7 +4,7 @@ type Props = {
 
 export default function Home() {
 
-  const Component = ({ title }: Props ) => {
+  const Component = ({ title }: Props) => {
     console.log(title);
 
     return (
@@ -17,7 +17,8 @@ export default function Home() {
   return (
     <div>
       <h2>RocketSeat</h2>
-      <Component title={2} />
+
+      <Component title={4} />
     </div>
   );
 }
