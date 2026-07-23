@@ -2,23 +2,57 @@ import Image from "next/image";
 import { Avatar } from "../components/avatar";
 import { LinkList } from "../components/link-list";
 import { SocialMedias } from "../components/social-medias";
-import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLink, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { JSX } from "react/jsx-runtime";
+import { createClient } from "../prismicio";
 
-export default function Home() {
+type PrismicLinkItem = {
+  link: {
+    link_type: string;
+    key: string;
+    url: string;
+  };
+  textlink: {
+    text: string;
+  }[];
+};
 
-  const meusLinks = [
-    { link: '#', text: 'Inscreva-se no NLW' },
-    { link: '#', text: 'Baixe meu e-book' },
-    { link: '#', text: 'Veja meu portfólio' },
-    { link: '#', text: 'Conheça meu curso' }
-  ]
+type PrismicSocialItem = {
+  icon: string; // ex: "youtube" digitado no CMS
+  link: {
+    url: string;
+  };
+};
 
-  const minhasRedes = [
-    { link: 'https://www.instagram.com/vinicius___santos1', icon: <FaInstagram className="size-6" /> },
-    { link: 'https://github.com/vintradev', icon: <FaGithub className="size-6" />},
-    { link: 'https://www.youtube.com/@RosiestSloth', icon: <FaYoutube className="size-6" />},
-    { link: 'https://www.linkedin.com/in/vintradev', icon: <FaLinkedin className="size-6" />}
-  ]
+export default async function Home() {
+
+  const client = createClient();
+  const page = await client.getSingle("home");
+
+  const socialIcons: Record<string, JSX.Element> = {
+    instagram: <FaInstagram className="size-6" />,
+    github: <FaGithub className="size-6" />,
+    youtube: <FaYoutube className="size-6" />,
+    linkedin: <FaLinkedin className="size-6" />
+  };
+
+  console.log(page.data.socials[0].link.url)
+
+  const meusLinks = page.data.links.map((item: PrismicLinkItem) => (
+    {
+      link: item.link.url,
+      text: item.textlink[0].text
+    }));
+
+  const minhasRedesSociais = page.data.socials.map((item: PrismicSocialItem) => {
+
+    const key = item.icon.toLowerCase();
+
+    return {
+      link: item.link.url,
+      icon: socialIcons[key] || <FaLink />
+    };
+  })
 
   return (
     <div className="relative h-screen w-screen">
@@ -43,7 +77,7 @@ export default function Home() {
       <div className="w-full max-w-md absolute z-10 text-white left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
         <Avatar />
         <LinkList links={meusLinks} />
-        <SocialMedias social_medias={minhasRedes} />
+        <SocialMedias social_medias={minhasRedesSociais} />
       </div>
     </div>
   );
