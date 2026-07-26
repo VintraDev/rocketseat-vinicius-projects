@@ -1,23 +1,7 @@
-type Props = {
-  title: string;
-};
-
-const Component = ({ title }: Props) => {
-  console.log(title);
-
-  return (
-    <>
-      <h2>Component: {title}</h2>
-    </>
-  );
-};
-
 export default function Home() {
   return (
-    <div>
+    <div className="bg-blue-500">
       <h2>Title 2</h2>
-
-      <Component title="1100" />
     </div>
   );
 }
