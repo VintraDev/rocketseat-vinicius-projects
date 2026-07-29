@@ -9,6 +9,7 @@ const eslintConfig = [
   {
     ignores: [
       'src/generated/prisma/**',
+      'src/app/generated/prisma/**',
       'pgdata/**',
       '.next/**',
       'node_modules/**',
