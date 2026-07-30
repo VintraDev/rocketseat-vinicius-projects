@@ -1,9 +1,9 @@
-import { Appointment as AppointmentPrisma } from '@/generated/prisma';
+import { Appointment as AppointmentPrisma } from '@/app/generated/prisma/client';
 import {
   Appointment,
   AppointmentPeriod,
   AppointmentPeriodDay,
-} from '@/types/appointment';
+} from '@/types/appointments';
 import { PeriodSection } from '@/components/period-section/period-section';
 
 const appointments = [
