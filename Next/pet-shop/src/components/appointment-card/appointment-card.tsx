@@ -35,12 +35,12 @@ export function AppointmentCard({
             {appointment.tutorName}
           </span>
         </div>
+      </div>
 
-        <div className="text-left pr-4 md:mt-0 col-span-2 md:col-end-1 flex justify-end items-center gap-2">
-          <span className="text-paragraph-small-size text-content-secondary">
-            {appointment.description}
-          </span>
-        </div>
+      <div className="text-left pr-4 hidden md:block mt-1 md:mt-0 col-span-2 md:col-span-1">
+        <span className="text-paragraph-small-size text-content-secondary">
+          {appointment.description}
+        </span>
       </div>
     </div>
   );
