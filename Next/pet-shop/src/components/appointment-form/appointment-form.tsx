@@ -13,9 +13,9 @@ import { Button } from '../ui/button';
 export function AppointmentForm() {
   return (
     <Dialog>
-      <DialogTrigger>
-        <Button variant="brand">Novo Agendamento</Button>
-      </DialogTrigger>
+      <DialogTrigger
+        render={<Button variant="brand">Novo Agendamento</Button>}
+      />
 
       <DialogContent>
         <DialogHeader>
