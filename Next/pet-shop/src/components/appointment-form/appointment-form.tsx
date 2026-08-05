@@ -219,7 +219,7 @@ export const AppointmentForm = () => {
                       Data
                     </FormLabel>
                     <Popover>
-                      <PopoverTrigger>
+                      <PopoverTrigger asChild>
                         <FormControl>
                           <Button
                             variant="outline"
