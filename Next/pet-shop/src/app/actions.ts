@@ -1,6 +1,7 @@
 'use server';
 
 import { prisma } from '@/lib/prisma';
+import { revalidatePath } from 'next/cache';
 import z from 'zod';
 
 const appointmentSchema = z.object({
@@ -48,6 +49,8 @@ export async function createAppointment(data: AppointmentData) {
         ...parsedData,
       },
     });
+
+    revalidatePath('/');
   } catch (error) {
     console.log(error);
   }
