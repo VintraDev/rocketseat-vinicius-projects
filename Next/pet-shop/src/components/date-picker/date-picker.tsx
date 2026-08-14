@@ -1,13 +1,19 @@
 'use client';
 
-import { ChevronLeft, ChevronRight, Calendar, ChevronDown } from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  Calendar as CalendarIcon,
+  ChevronDown,
+} from 'lucide-react';
 import { Button } from '../ui/button';
-import { Popover } from '../ui/popover';
+import { Popover, PopoverContent } from '../ui/popover';
 import { PopoverTrigger } from '@radix-ui/react-popover';
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import { addDays, format, isValid } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import { Calendar } from '../ui/calendar';
 
 export function DatePicker() {
   const router = useRouter();
@@ -40,6 +46,11 @@ export function DatePicker() {
     updateURLWithDate(newDate);
   };
 
+  const handleDateSelect = (selectedDate: Date | undefined) => {
+    updateURLWithDate(selectedDate);
+    setIsPopoverOpen(false);
+  };
+
   return (
     <div className="flex items-center gap-2">
       <Button variant="outline" onClick={() => handleNavigateDay(-1)}>
@@ -53,9 +64,9 @@ export function DatePicker() {
             className="w-min-45 justify-between text-left font-normal bg-transparent border-border-primary text-content-primary hover:bg-background-tertiary hover:border-border-secondary hover:text-content-primary focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-border-brand focus:border-border-brand focus-visible:border-border-brand"
           >
             <div className="flex items-center gap-2">
-              <Calendar className="h-4 w-4 text-content-brand" />
+              <CalendarIcon className="h-4 w-4 text-content-brand" />
               {date ? (
-                format(date, 'PPP', { locale: ptBR })
+                format(date, 'dd/MM/yyy', { locale: ptBR })
               ) : (
                 <span>Selecione uma data</span>
               )}
@@ -63,6 +74,15 @@ export function DatePicker() {
             <ChevronDown className="h-4 w-4 opacity-50" />
           </Button>
         </PopoverTrigger>
+        <PopoverContent className="w-auto p-0">
+          <Calendar
+            mode="single"
+            selected={date}
+            onSelect={handleDateSelect}
+            autoFocus
+            locale={ptBR}
+          />
+        </PopoverContent>
       </Popover>
 
       <Button variant="outline" onClick={() => handleNavigateDay(1)}>
