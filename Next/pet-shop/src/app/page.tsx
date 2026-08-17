@@ -31,7 +31,7 @@ export default async function Home({
 
   return (
     <div className="bg-background-primary p-6">
-      <div className="flex items-center justify-between md:mb-8">
+      <div className="flex items-center justify-between md:mb-8 gap-6">
         <div>
           <h1 className="text-title-size text-content-primary mb-2">
             Sua Agenda
