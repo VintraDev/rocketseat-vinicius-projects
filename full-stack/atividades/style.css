@@ -22,26 +22,30 @@
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: regular;
+  color: var(--text-secondary);
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   font-size: 36px;
   font-weight: bold;
+  color: var(--text-primary);
 }
 
 h2 {
   font-size: 32px;
   font-weight: bold;
+  color: var(--text-primary);
 }
 
 h3 {
   font-size: 28px;
   font-weight: bold;
+  color: var(--text-primary);
 }
 
 strong {
@@ -52,16 +56,42 @@ strong {
   font-style: italic;
 }
 
+.headline {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-headline);
+}
+
 img {
-    width: 100%;
-    border-radius: 28px;
+  width: 100%;
+  border-radius: 28px;
 }
 
 body {
-    max-width: 1120px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
 #heart-icon {
-    width: 16px;
+  width: 16px;
 }
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#heading-img {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
