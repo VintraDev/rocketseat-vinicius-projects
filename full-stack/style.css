@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
+:root {
+  --background-color: #573824;
+  --surface-color: #f0e8c2;
+
+  --text-color-primary: #291b1a;
+  --text-color-secondary: #573a37;
+  --text-color-on-bg: #f0e8c2;
+
+  --heading-1: 40px "Alice" regular;
+  --heading-2: 24px "Alice" regular;
+  --paragraph: 16px "Alice" regular;
+
+  line-height: 150%;
+  color: var(--text-color-secondary);
+}
+
+body {
+  background-image: url(assets/bg.jpg);
+  background-size: cover;
+  font: var(--paragraph);
+}
+
+#page {
+  box-sizing: border-box;
+  width: 800px;
+  padding: 24px;
+  background-color: var(--surface-color);
+  border-radius: 24px;
+  margin: 48px auto;
+}
+
+img {
+  border-radius: 16px;
+  width: 100%;
+}
+
+h1 {
+  line-height: 140%;
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h1,
+h2 {
+  color: #291b1a;
+}
