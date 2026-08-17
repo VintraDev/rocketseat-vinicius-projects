@@ -8,12 +8,13 @@
   --text-color-secondary: #573a37;
   --text-color-on-bg: #f0e8c2;
 
-  --heading-1: 40px "Alice" regular;
-  --heading-2: 24px "Alice" regular;
-  --paragraph: 16px "Alice" regular;
+  --heading-1: 40px "Alice";
+  --heading-2: 24px "Alice";
+  --paragraph: 16px "Alice" rular;
 
   line-height: 150%;
   color: var(--text-color-secondary);
+  font-family: "Alice" sans-serif;
 }
 
 body {
@@ -36,16 +37,45 @@ img {
   width: 100%;
 }
 
+main {
+  padding: 24px;
+}
+
+section + section {
+  margin-top: 24px;
+}
+
+#about p + p {
+  margin-top: 12px;
+}
+
 h1 {
   line-height: 140%;
-  font-size: 40px;
+  font: var(--heading-1);
 }
 
 h2 {
-  font-size: 24px;
+  font: var(--heading-2);
 }
 
 h1,
 h2 {
-  color: #291b1a;
+  margin-bottom: 4px;
+  color: var(--text-color-primary);
+  line-height: 150%;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+footer {
+  color: #f0e8c2;
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+footer img {
+  vertical-align: middle;
+  width: 12px;
 }
