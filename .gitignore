@@ -1,2 +1,5 @@
 
 /dev-links/.next
+/Next/pet-shop/node_modules
+/Next/pet-shop/pgdata
+/Next/pet-shop/src/generated
