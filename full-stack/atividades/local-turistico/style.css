@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+:root {
+  /* Containers */
+  --background-color: #f5f4f0;
+  --border-primary: #d9d9d9;
+
+  /* Text */
+
+  --text-primary: #1b1b1b;
+  --text-secondary: #333333;
+  --text-tertiary: #696969;
+  --text-headline: #e1624f;
+
+  /* Accent */
+
+  --accent-blue: #0c51a7;
+  --accent-orange: #e95e10;
+  --accent-pink: #e5245e;
+  --accent-purple: #591b98;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: regular;
+  color: var(--text-secondary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+strong {
+  font-weight: bold;
+}
+
+.subtitle {
+  font-style: italic;
+}
+
+.headline {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-headline);
+}
+
+img {
+  width: 100%;
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+img:not(#primeira-imagem) {
+  max-height: 350px;
+}
+
+body {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+#heart-icon {
+  width: 16px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#heading-img {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+div#feature {
+  margin-top: 48px;
+}
+
+section#feature {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+section:last-child {
+  text-align: center;
+  padding: 48px 0;
+  border-top: 1px solid var(--border-primary);
+}
+
+#feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+span:not(.headline) {
+  font-weight: bold;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ul {
+  list-style: inside;
+}
+
+ul li {
+  font-weight: bold;
+}
+
+ul li:first-child {
+  color: var(--accent-blue);
+}
+
+ul li:not(:first-child):not(:last-child) {
+  color: var(--accent-pink);
+}
+
+ul li:last-child {
+  color: var(--accent-orange);
+}
+
+footer {
+  text-align: center;
+  font-family: 'Alice', serif;
+}
