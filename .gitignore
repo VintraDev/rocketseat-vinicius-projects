@@ -3,3 +3,5 @@
 /Next/pet-shop/node_modules
 /Next/pet-shop/pgdata
 /Next/pet-shop/src/generated
+/Next/pet-shop/.next
+Next/pet-shop/.env
