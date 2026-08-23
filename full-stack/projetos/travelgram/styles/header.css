@@ -18,6 +18,7 @@ header .container {
     object-fit: cover;
     max-width: 176px;
     max-height: 176px;
+    border-radius: 50%;
 }
 
 #profile div {
