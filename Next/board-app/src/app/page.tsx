@@ -1,30 +1,43 @@
-import { ArchiveIcon } from 'lucide-react';
+import { ArchiveIcon, MessageCircleIcon, ThumbsUpIcon } from 'lucide-react';
 import { Section } from '@/components/section';
+import { Card } from '@/components/card';
+import { Button } from '@/components/button';
 
 export default function Home() {
   return (
-    <div className="max-w-[1620px] mx-auto p-10 flex flex-col gap-8 h-dvh">
-      <div />
+    <div className="max-w-[1620px] w-full mx-auto p-10 flex flex-col gap-8 h-dvh">
+      <div></div>
 
       <main className="grid grid-cols-4 gap-5 flex-1 items-stretch">
         <Section.Root>
-          {/* Header */}
-          <Section.Header className="flex items-center justify-between px-3">
-            <Section.Title className="bg-navy-700 rounded-lg px-3 py-1.5 flex items0center gap-2 text-xs">
+          <Section.Header>
+            <Section.Title>
               <ArchiveIcon className="size-3" />
               Backlog
             </Section.Title>
 
-            <Section.IsseuCount className="text-xs text-navy-200">
-              23
-            </Section.IsseuCount>
+            <Section.IssueCount>16</Section.IssueCount>
           </Section.Header>
 
           {/* Content */}
-          <Section.Content className="flex flex-col gap-2.5 overflow-y-scroll p-3">
-            <div>Card 1</div>
-            <div>Card 2</div>
-            <div>Card 3</div>
+          <Section.Content>
+            <Card.Root>
+              <Card.Header>
+                <Card.Number>ECO-001</Card.Number>
+                <Card.Title>Implementar cartão de crédito</Card.Title>
+              </Card.Header>
+              <Card.Footer>
+                <Button>
+                  <ThumbsUpIcon className="size-3" />
+                  <span className="text-sm">12</span>
+                </Button>
+
+                <Button>
+                  <MessageCircleIcon className="size-3" />
+                  <span className="text-sm">6</span>
+                </Button>
+              </Card.Footer>
+            </Card.Root>
           </Section.Content>
         </Section.Root>
       </main>
