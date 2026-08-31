@@ -14,6 +14,6 @@ export function Button({ className, type = 'button', ...props }: ButtonProps) {
         className
       )}
       {...props}
-    ></button>
+    />
   );
 }

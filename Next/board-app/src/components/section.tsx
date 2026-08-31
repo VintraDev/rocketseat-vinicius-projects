@@ -53,7 +53,10 @@ interface SectionContentProps extends ComponentProps<'div'> {}
 function SectionContent({ className, ...props }: SectionContentProps) {
   return (
     <div
-      className={twMerge('flex flex-col gap-2.5 p-3', className)}
+      className={twMerge(
+        'flex flex-col gap-2.5 p-3 overflow-y-auto',
+        className
+      )}
       {...props}
     />
   );
