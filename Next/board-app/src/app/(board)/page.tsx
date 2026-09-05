@@ -2,8 +2,21 @@ import { ArchiveIcon, MessageCircleIcon, ThumbsUpIcon } from 'lucide-react';
 import { Section } from '@/components/section';
 import { Card } from '@/components/card';
 import { Button } from '@/components/button';
+import { Metadata } from 'next';
+import { listIssues } from '@/http/list-issues';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Board',
+};
+
+interface boardProps {
+  searchParams: Promise<{ q?: string }>;
+}
+
+export default async function Home({ searchParams }: boardProps) {
+  const { q } = await searchParams;
+
+  const issues = await listIssues();
   return (
     <main className="grid grid-cols-4 gap-5 flex-1 items-stretch">
       <Section.Root>
@@ -13,28 +26,32 @@ export default function Home() {
             Backlog
           </Section.Title>
 
-          <Section.IssueCount>16</Section.IssueCount>
+          <Section.IssueCount>{issues.backlog.length}</Section.IssueCount>
         </Section.Header>
 
         {/* Content */}
         <Section.Content>
-          <Card.Root>
-            <Card.Header>
-              <Card.Number>ECO-001</Card.Number>
-              <Card.Title>Implementar cartão de crédito</Card.Title>
-            </Card.Header>
-            <Card.Footer>
-              <Button className="text-navy-100 flex items-center gap-2 rounded-lg px-2.5 py-1 bg-navy-600 cursor-pointer">
-                <ThumbsUpIcon className="size-3" />
-                <span className="text-sm">12</span>
-              </Button>
+          {issues.backlog.map((issues) => {
+            return (
+              <Card.Root key={issues.id}>
+                <Card.Header>
+                  <Card.Number>{issues.issueNumber}</Card.Number>
+                  <Card.Title>{issues.title}</Card.Title>
+                </Card.Header>
+                <Card.Footer>
+                  <Button className="text-navy-100 flex items-center gap-2 rounded-lg px-2.5 py-1 bg-navy-600 cursor-pointer">
+                    <ThumbsUpIcon className="size-3" />
+                    <span className="text-sm">12</span>
+                  </Button>
 
-              <Button>
-                <MessageCircleIcon className="size-3" />
-                <span className="text-sm">6</span>
-              </Button>
-            </Card.Footer>
-          </Card.Root>
+                  <Button>
+                    <MessageCircleIcon className="size-3" />
+                    <span className="text-sm">6</span>
+                  </Button>
+                </Card.Footer>
+              </Card.Root>
+            );
+          })}
         </Section.Content>
       </Section.Root>
     </main>
