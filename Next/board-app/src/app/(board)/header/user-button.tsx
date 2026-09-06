@@ -2,7 +2,6 @@
 
 import { authClient } from '@/lib/auth-client';
 import { Loader2Icon, LogInIcon } from 'lucide-react';
-import Image from 'next/image';
 
 export function UserButton() {
   const { data: session, isPending } = authClient.useSession();
@@ -28,9 +27,8 @@ export function UserButton() {
             onClick={handleSignOut}
             className="size-8 rounded-full border border-navy-500 flex items-center justify-center hover:bg-navy-600 transition-colors duration-150 cursor-pointer"
           >
-            <Image
-              width={100}
-              height={100}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={session.user.image ?? ''}
               alt={session.user.name}
               className="size-8 rounded-full"
