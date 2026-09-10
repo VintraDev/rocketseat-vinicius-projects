@@ -1,5 +1,4 @@
-import { SearchInput } from '../../../components/header/search-input';
-import { UserButton } from '../../../components/header/user-button';
+import { UserButton } from '@/components/header/user-button';
 
 export function Header() {
   return (
@@ -10,8 +9,6 @@ export function Header() {
           Follow the development of our entire platform
         </p>
       </div>
-
-      <SearchInput />
       <UserButton />
     </div>
   );
