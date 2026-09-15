@@ -1,5 +1,6 @@
 import { IssueSchema } from '@/api/routes/get-issue';
 import { clientEnv } from '@/env';
+import { setTimeout } from 'node:timers/promises';
 
 interface GetIssueParams {
   id?: string;
