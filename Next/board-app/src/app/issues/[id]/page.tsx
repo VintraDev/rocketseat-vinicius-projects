@@ -13,6 +13,10 @@ import { IssueCommentsSkeleton } from './issue-comments/issue-comments-skeleton'
 import { Input } from '@/components/input';
 import { IssueLikeButton } from './issue-like-button';
 import { Skeleton } from '@/components/skeleton';
+import { IssueCommentForm } from './issue-comment-form';
+import { createComment } from '@/http/create-comment';
+import { authClient } from '@/lib/auth-client';
+import { headers } from 'next/headers';
 
 interface IssuePageProps {
   params: Promise<{ id: string }>;
@@ -40,7 +44,21 @@ const statusLabels = {
 export default async function IssuePage({ params }: IssuePageProps) {
   const { id } = await params;
 
+  const { data: session } = await authClient.getSession({
+    fetchOptions: {
+      headers: await headers(),
+    },
+  });
+
   const issue = await getIssue({ id });
+
+  const isAuthenticated = !!session?.user;
+
+  async function handleCreateComment(text: string) {
+    'use server';
+
+    await createComment({ issueId: id, text });
+  }
 
   return (
     <main className="max-w-225 mx-auto w-full flex flex-col gap-4 p-6 bg-navy-800 border-[0.5px] border-navy-500 rounded-xl">
@@ -70,19 +88,10 @@ export default async function IssuePage({ params }: IssuePageProps) {
       <div className="flex flex-col gap-2">
         <span className="font-semibold">Comments</span>
 
-        <form className="relative w-full">
-          <Input
-            className="bg-navy-700 h-11 pr-24 w-full"
-            placeholder="Leave a comment..."
-          />
-          <button
-            type="submit"
-            className="flex items-center gap-2 text-indigo-400 absolute right-3 top-1/2 -translate-y-1/2 text-xs hover:text-indigo-300 cursor-pointer disabled:opacity-50"
-          >
-            Publish
-            <MessageCirclePlusIcon className="size-3" />
-          </button>
-        </form>
+        <IssueCommentForm
+          onCreateComment={handleCreateComment}
+          isAuthenticated={isAuthenticated}
+        />
 
         <div className="mt-3">
           <Suspense fallback={<IssueCommentsSkeleton />}>
