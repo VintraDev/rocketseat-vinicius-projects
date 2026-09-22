@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { SearchInput } from '../../../components/header/search-input';
 import { UserButton } from '../../../components/header/user-button';
 
@@ -11,7 +12,9 @@ export function Header() {
         </p>
       </div>
 
-      <SearchInput />
+      <Suspense>
+        <SearchInput />
+      </Suspense>
       <UserButton />
     </div>
   );
