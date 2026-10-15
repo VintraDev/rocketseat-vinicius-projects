@@ -15,5 +15,12 @@
     --gray-600: #0D0E11;
 
     /* Fonts */
-    
+    --title-lg: 56px/120% bold 'Asap';
+    --title-md: 24px/120% bold 'Asap';
+    --title-sm: 16px/120% bold 'Asap';
+
+    --subtitle: 20px/120% regular 'Inconsolata';
+
+    --text-md: 16px/140% regular 'Maven Pro';
+    --text-sm: 14px/140% regular 'Maven Pro';
 }
