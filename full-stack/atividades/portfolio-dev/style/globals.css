@@ -24,3 +24,20 @@
     --text-md: 16px/140% regular 'Maven Pro';
     --text-sm: 14px/140% regular 'Maven Pro';
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+section {
+    display: grid;
+    justify-items: center;
+    place-content: center;
+    min-height: 100dvh;
+}
+
+section:first-child {
+    background-image: url(/assets/img/Background_Intro.png);
+    background-position: center;
+}
