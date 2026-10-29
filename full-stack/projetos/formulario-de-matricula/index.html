@@ -20,7 +20,7 @@
         <div class="main-container">
           <div class="back">
             <img src="assets/icons/arrow-left-02.svg" alt="Ícone de voltar" />
-            <span>voltar</span>
+            <span>Voltar</span>
           </div>
 
           <h1>Formulário de matrícula</h1>
@@ -29,23 +29,23 @@
             educação infantil Estrelas do Amanhã.
           </p>
 
-          <form enctype="multipart/form-data" method="post">
+          <form method="post" enctype="multipart/form-data">
             <fieldset class="child-info">
               <legend>Informações da criança</legend>
 
               <div class="input-wrapper">
                 <label for="fullname">Nome completo</label>
                 <input
-                  type="text"
                   id="fullname"
-                  placeholder="Qual o nome da criança?"
                   name="fullname"
+                  type="text"
+                  placeholder="Qual o nome da criança"
                 />
               </div>
 
               <div class="input-wrapper">
                 <label for="birth">Data de nascimento</label>
-                <input type="date" id="birth" lang="pt-BR" name="birth" />
+                <input type="date" name="birth" id="birth" lang="pt-BR" />
               </div>
 
               <div class="select-wrapper">
@@ -72,8 +72,7 @@
                 <label for="birth-file">Certidão de Nascimento</label>
 
                 <div class="dropzone">
-                  <input type="file" name="birth-file" id="birth-file" />
-
+                  <input type="file" id="birth-file" name="birth-file" />
                   <svg
                     width="48"
                     height="48"
@@ -82,22 +81,20 @@
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M34.9552 18.0221C34.97 18.022 34.985 18.022 35 18.022C39.9706 18.022 44 22.0588 44 27.0386C44 31.6796 40.5 35.5016 36 36M34.9552 18.0221C34.9848 17.6921 35 17.3579 35 17.0202C35 10.9339 30.0752 6 24 6C18.2465 6 13.5247 10.4253 13.0408 16.0638M34.9552 18.0221C34.7506 20.2952 33.8572 22.3692 32.4856 24.033M20.001 18.022C18.3295 16.7639 16.2516 16.0183 14 16.0183C13.6765 16.0183 13.3565 16.0337 13.0408 16.0638C7.96796 16.5475 4 20.8278 4 26.0366C4 30.8834 7.43552 34.9264 12 35.8546"
+                      d="M34.9552 18.0221C34.97 18.022 34.985 18.022 35 18.022C39.9706 18.022 44 22.0588 44 27.0386C44 31.6796 40.5 35.5016 36 36M34.9552 18.0221C34.9848 17.6921 35 17.3579 35 17.0202C35 10.9339 30.0752 6 24 6C18.2465 6 13.5247 10.4253 13.0408 16.0638M34.9552 18.0221C34.7506 20.2952 33.8572 22.3692 32.4856 24.033M13.0408 16.0638C7.96796 16.5475 4 20.8278 4 26.0366C4 30.8834 7.43552 34.9264 12 35.8546M13.0408 16.0638C13.3565 16.0337 13.6765 16.0183 14 16.0183C16.2516 16.0183 18.3295 16.7639 20.001 18.022"
+                      stroke="#D6D3D1"
                       stroke-width="3"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke="#D6D3D1"
                     />
-
                     <path
                       d="M24 26V42M24 26C22.5996 26 19.9831 29.9886 19 31M24 26C25.4004 26 28.017 29.9886 29 31"
+                      stroke="#D6D3D1"
                       stroke-width="3"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke="#D6D3D1"
                     />
                   </svg>
-
                   <p>
                     Clique aqui para <br />
                     selecionar os arquivos
@@ -145,7 +142,7 @@
                 </div>
 
                 <div class="input-wrapper flex-1">
-                  <label for="state">Número</label>
+                  <label for="state">Estado</label>
                   <input
                     type="text"
                     id="state"
@@ -159,6 +156,7 @@
 
             <fieldset class="gardian">
               <legend>Informações do responsável</legend>
+
               <div class="input-wrapper">
                 <label for="gardian">Nome do responsável</label>
                 <input type="text" id="gardian" name="gardian" />
@@ -169,15 +167,59 @@
 
               <div class="input-wrapper">
                 <label for="phone">Telefone</label>
-                <input type="tel" name="phone" id="phone" placeholder="(10) 9 8765-4321" />
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="(10) 9 8765-4321"
+                />
               </div>
 
               <div class="input-wrapper">
                 <label for="mail">Email</label>
-                <input type="email" name="mail" id="mail" required>
+                <input type="email" name="mail" id="mail" required />
                 <div class="error">
-                  <img src="assets/icons/alert-circle.svg" alt="Ícone de alerta vermelho">
+                  <img
+                    src="assets/icons/alert-circle.svg"
+                    alt="ícone de alerta vermelho"
+                  />
                   <span>Insira um e-mail válido</span>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="enroll-options">
+              <legend>Opções de matrícula</legend>
+              <div class="input-wrapper">
+                <label>Selecione o turno de estudo</label>
+
+                <div class="radio-wrapper">
+                  <div class="radio-inner">
+                    <div class="radio-image"></div>
+                    <input
+                      type="radio"
+                      name="study-shift"
+                      value="morning"
+                      id="morning"
+                    />
+                    <img
+                      src="assets/icons/sun-cloud-02.svg"
+                      alt="ícone de sol com nuvem"
+                    />
+                    <label for="morning">Manhã</label>
+                  </div>
+
+                  <div class="radio-inner">
+                    <div class="radio-image"></div>
+                    <input
+                      type="radio"
+                      name="study-shift"
+                      value="evening"
+                      id="evening"
+                    />
+                    <img src="assets/icons/sun-02.svg" alt="ícone de sol" />
+                    <label for="evening">Tarde</label>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -188,10 +230,10 @@
       <aside>
         <div class="aside-container">
           <header>
-            <img src="assets/logo.svg" alt="Logo estrelas do amanhã" />
+            <img src="assets/logo.svg" alt="Logo Estrelas do Amanhã" />
             <h2>
-              Por que acada momento de
-              <span>aprendizado</span>
+              Porque cada momento de
+              <span> aprendizado </span>
               conta
             </h2>
             <p>
@@ -202,7 +244,7 @@
 
           <img
             src="assets/Illustration.svg"
-            alt="Ilustração de uma professora com crianças prestando atenção"
+            alt="Ilustração de um professora com crianças prestando atenção"
           />
         </div>
       </aside>
