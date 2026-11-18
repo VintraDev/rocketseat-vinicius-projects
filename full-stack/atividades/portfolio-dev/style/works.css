@@ -1,0 +1,16 @@
+#works {
+    padding-top: 4.5rem;
+    padding-bottom: 9rem;
+
+  & span {
+    color: var(--red);
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+
+  & h2 {
+    color: var(--gray-100);
+
+    margin-bottom: 3.5rem;
+  }
+}

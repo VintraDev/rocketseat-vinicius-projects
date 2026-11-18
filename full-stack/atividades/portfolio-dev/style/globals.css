@@ -30,4 +30,17 @@
   padding: 0px;
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gray-500);
+}
+
+.container {
+  padding-inline: 7.5rem;
+}
+
+img {
+  width: 100%;
 }
