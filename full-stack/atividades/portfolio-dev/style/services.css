@@ -1,0 +1,14 @@
+#services {
+    background: var(--gray-600);
+    padding-top: 5.5rem;
+    padding-bottom: 7.5rem;
+
+    & span {
+        color: var(--red);
+    }
+
+    & h2 {
+        color: var(--gray-100);
+        margin-top: .5rem;
+    }
+}
