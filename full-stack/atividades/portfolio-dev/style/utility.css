@@ -56,3 +56,35 @@
 .gray-600 {
   color: var(--gray-600);
 }
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  justify-items: center;
+}
+
+.gap-2 {
+  gap: 5.875rem;
+}
+
+.gap-1 {
+  gap: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
