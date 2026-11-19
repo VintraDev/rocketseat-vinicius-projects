@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio Dev</title>
+    <link rel="stylesheet" href="style/index.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero grid content-center">
+        <div class="grid items-center justify-center">
+          <div class="profile-image">
+            <img src="/assets/img/profile-image.png" alt="Imagem do Vinicius" />
+            <img class="code-icon" src="assets/icons/Code.svg" alt="" />
+          </div>
+
+          <div class="profile grid items-center text-center">
+            <p class="subtitle">
+              Hello World! Meu nome é <span>Vinicius Santos</span> e sou
+            </p>
+            <h1 class="title-lg">Desenvolvedor Fullstack</h1>
+            <p class="text-sm">
+              Transformo necessidades em aplicações reais, evolventes e
+              funcionais. Desenvolvo sistemas através da minha paixão pela
+              tecnologia, contribuindo com soluções inovadoras e eficazes para
+              desafios complexos.
+            </p>
+          </div>
+
+          <nav class="flex gap-1">
+            <span class="text-md flex items-center justify-center"
+              ><img src="/assets/icons/GitHub.svg" alt="Ícone do Github" />
+              GitHub</span
+            >
+            <span class="text-md flex items-center justify-center"
+              ><img
+                src="/assets/icons/HTML.svg"
+                alt="Ícone do HTML"
+              />HTML</span
+            >
+            <span class="text-md flex items-center justify-center"
+              ><img src="/assets/icons/CSS.svg" alt="" />CSS</span
+            >
+            <span class="text-md flex items-center justify-center"
+              ><img
+                src="/assets/icons/JavaScript.svg"
+                alt="Ícone do JavaScript"
+              />JavaScript</span
+            >
+            <span class="text-md flex items-center justify-center"
+              ><img
+                src="/assets/icons/React.svg"
+                alt="Ícone do React"
+              />React</span
+            >
+            <span class="text-md flex items-center justify-center"
+              ><img
+                src="/assets/icons/Node.js.svg"
+                alt="Ícone do Node.js"
+              />Node.js</span
+            >
+          </nav>
+        </div>
+
+        <a href="#works" class="carretDoubleDown"
+          ><img src="/assets/icons/CaretDoubleDown.svg" alt=""
+        /></a>
+      </section>
+
+      <section id="works" class="grid items-center container">
+        <span class="subtitle">Meu trabalho</span>
+        <h2 class="title-md">Veja os meus projetos em destaque</h2>
+        <div class="cards grid">
+          <!-- Cards -->
+          <div class="projectCard">
+            <img src="assets/img/Thumbnail_Project-01.png" alt="" />
+            <h3>Travelgram</h3>
+            <p>
+              Rede social onde as pessoas mostram os registros de suas viagens
+              pelo mundo
+            </p>
+          </div>
+          <div class="projectCard">
+            <img src="assets/img/Thumbnail_Project-02.png" alt="" />
+            <h3>Tech News</h3>
+            <p>Homepage de um portal de notícias sobre a área de tecnologia</p>
+          </div>
+          <div class="projectCard">
+            <img src="assets/img/Thumbnail_Project-03.png" alt="" />
+            <h3>Página de receita</h3>
+            <p>Página com o passo a passo de uma receita para cupcakes</p>
+          </div>
+          <div class="projectCard">
+            <img src="assets/img/Thumbnail_Project-04.png" alt="" />
+            <h3>ZinGen</h3>
+            <p>
+              Landing Page completa e responsiva de um aplicativo de Karaokê
+            </p>
+          </div>
+          <div class="projectCard">
+            <img src="assets/img/Thumbnail_Project-05.png" alt="" />
+            <h3>Refund</h3>
+            <p>Um sistema para pedido e acompanhamento de reembolso</p>
+          </div>
+          <div class="projectCard">
+            <img src="assets/img/Thumbnail_Project-06.png" alt="" />
+            <h3>Página de turismo</h3>
+            <p>
+              Página com as principais informações para quem quer viajar para
+              Busan
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="container grid items-center">
+        <span class="subtitle">Meus Serviços</span>
+        <h2 class="title-md">Como posso ajudar o seu negócio</h2>
+        <div class="cards grid">
+          <div class="card">
+            <img src="/assets/icons/Devices.svg" alt="" />
+            <h3>Websites e Aplicativos</h3>
+            <p>Desenvolvimento de interfaces</p>
+          </div>
+
+          <div class="card">
+            <img src="/assets/icons/HardDrives.svg" alt="" />
+            <h3>API e banco de dados</h3>
+            <p>Criação de serviços do sistema</p>
+          </div>
+
+          <div class="card">
+            <img src="/assets/icons/Infinity.svg" alt="" />
+            <h3>DevOps</h3>
+            <p>Gestão e infraestrutura da aplicação</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="grid items-center">
+        <span class="subtitle">Contato</span>
+        <h2 class="title-md">Gostou do meu trabalho?</h2>
+        <p class="text-md">
+          Entre em contato ou acompanhe as minhas redes sociais!
+        </p>
+
+        <nav class="grid">
+          <a href="" class="flex items-center text-button"
+            ><img src="/assets/icons/LinkedinLogo.svg" alt="" />Linkedin
+            <img
+              src="assets/icons/ArrowUpRight.svg"
+              alt=""
+              class="arrowUpRight"
+          /></a>
+          <a href="" class="flex items-center text-button"
+            ><img src="/assets/icons/InstagramLogo.svg" alt="" />Instagram <img
+              src="assets/icons/ArrowUpRight.svg"
+              alt=""
+              class="arrowUpRight"
+          /></a
+          >
+          <a href="" class="flex items-center text-button"
+            ><img src="/assets/icons/GithubLogo.svg" alt="" />GitHub <img
+              src="assets/icons/ArrowUpRight.svg"
+              alt=""
+              class="arrowUpRight"
+          /></a
+          >
+          <a href="" class="flex items-center text-button"
+            ><img src="/assets/icons/EnvelopeSimple.svg" alt="" />E-mail <img
+              src="assets/icons/ArrowUpRight.svg"
+              alt=""
+              class="arrowUpRight"
+          /></a
+          >
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>

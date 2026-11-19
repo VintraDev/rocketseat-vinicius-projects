@@ -1,0 +1,75 @@
+.hero {
+  background: url(/assets/img/Background_Intro.png) no-repeat center center /
+    cover;
+  min-height: 100dvh;
+
+  & .profile-image {
+    position: relative;
+    padding: 5.5px;
+
+    &::before {
+      content: "";
+      border: 2px solid var(--red);
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+    }
+
+    & img:not(.code-icon) {
+      border-radius: 50%;
+      display: block;
+    }
+
+    & img.code-icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: fit-content;
+    }
+  }
+  & .profile {
+    max-width: 42.5rem;
+  }
+
+  & h1 {
+    color: var(--gray-100);
+    margin-top: 0.5rem;
+  }
+
+  & p.subtitle {
+    color: var(--gray-200);
+    margin-top: 3.5rem;
+    & span {
+      color: var(--red);
+    }
+  }
+
+  & p:not(.subtitle) {
+    color: var(--gray-300);
+    margin-top: 1.5rem;
+  }
+
+  nav {
+    margin-top: 5rem;
+    & span {
+      background-color: var(--gray-400);
+      color: var(--gray-200);
+      padding-block: 0.5rem;
+      padding-inline: 1rem;
+      width: fit;
+      border-radius: 9999px;
+      gap: 0.5rem;
+      border: 1px solid transparent;
+      transition: border ease 200ms;
+      
+
+      &:hover {
+        border: 1px solid var(--gray-200);
+      }
+    }
+  }
+
+  .carretDoubleDown {
+    margin-top: 5.875rem;
+  }
+}
