@@ -23,6 +23,8 @@
 
   --text-md: normal 16px/140% "Maven Pro", sans-serif;
   --text-sm: normal 14px/140% "Maven Pro", sans-serif;
+
+  --text-button: 500 16px/140% "Maven Pro", sans-serif;
 }
 
 * {
